@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --title: 'Big Shoulders Display', cursive;
+    --text: 'Lexend Deca', sans-serif;
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a,
+li {
+    text-decoration: none;
+    color: black;
+}
+.container {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-light-gray);
+}
+.main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:"sedans suvs luxury";
+    width: 56rem;
+    height: auto;
+}
+.sedans-box {
+    grid-area: sedans;
+    background-color: var(--Bright-orange);
+    border-bottom-left-radius: .6rem;
+    border-top-left-radius: .6rem;
+}
+.suvs-box {
+    grid-area: suvs;
+    background-color: var(--Dark-cyan);
+}
+.luxury-box {
+    grid-area: luxury;
+    background-color: var(--Very-dark-cyan);
+    border-top-right-radius: .6rem;
+    border-bottom-right-radius: .6rem;
+}
+.category {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.title  {
+    font-size: 2.4rem;
+    font-family: var(--title);
+    text-transform: uppercase;
+    padding: 1.8rem 0;
+    color: var(--very-light-gray);
+    font-weight: 400;
+}
+.text{
+    color: var(--Transparent-white-paragraphs);
+    font-family: var(--text);
+    font-size: .85rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.03rem;
+}
+.btn {
+    margin-top: 5rem;
+    padding: .85rem 2rem;
+    border-radius: 2rem;
+    font-size: .9rem;
+    border: solid 2px;
+    letter-spacing: 0.02rem;
+    font-family: var(--text);
+    border-color: var(--very-light-gray);
+    background: var(--very-light-gray);
+}
+.btn:hover{
+    background: transparent;
+    color: var(--very-light-gray);
+}
+.luxury{
+    color: var(--Very-dark-cyan);
+}
+.suvs{
+    color: var(--Dark-cyan);
+}
+.sedans{
+    color: var(--Bright-orange);
+}
+@media(max-width:920px){
+    .main {
+        /* display: grid; */
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "sedans" 
+        "suvs" 
+        "luxury";
+        width: 20rem;
+        height: auto;
+        margin-top: 3rem;
+    }
+    .sedans-box {
+        border-bottom-left-radius: 0rem;
+        border-top-left-radius: .6rem;
+        border-top-right-radius: .6rem;
+    }
+    .luxury-box {
+        border-top-right-radius: 0rem;
+        border-bottom-right-radius: .6rem;
+        border-bottom-left-radius: .6rem;
+        margin-bottom: 3rem;
+    }
+    .btn {
+        margin-top: 1.4rem;
+        padding: .85rem 2rem;
+        border-radius: 2rem;
+        font-size: .9rem;
+        border: solid 2px;
+        letter-spacing: 0.02rem;
+        font-family: var(--text);
+        border-color: var(--very-light-gray);
+        background: var(--very-light-gray);
+    }
+    .title  {
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;   
+    }
+}
