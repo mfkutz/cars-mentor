@@ -65,7 +65,7 @@ li {
 .text{
     color: var(--Transparent-white-paragraphs);
     font-family: var(--text);
-    font-size: .85rem;
+    font-size: .92rem;
     line-height: 1.5rem;
     letter-spacing: 0.03rem;
 }
