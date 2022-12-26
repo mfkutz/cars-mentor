@@ -83,6 +83,7 @@ li {
 .btn:hover{
     background: transparent;
     color: var(--very-light-gray);
+    cursor: pointer;
 }
 .luxury{
     color: var(--Very-dark-cyan);
